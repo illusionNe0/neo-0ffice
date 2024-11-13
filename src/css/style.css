@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+*,
+*::before,
+*::after {
+    user-select: none;
+    -webkit-user-select: none; /* For Safari */
+    -moz-user-select: none;    /* For Firefox */
+    -ms-user-select: none;     /* For Internet Explorer/Edge */
+}
+
+body {
+    font-family: 'VT323', monospace;
+}
+
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    color: #00ff00;
+    font-size: 18px;
+}
+
+.blocks {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.terminal_block {
+    width: 40%;
+    border: 2px solid #00ff00;
+}
+
+.screen_block {
+    width: 60%;
+    padding-left: 40px;
+}
+
+.terminal {
+    padding: 10px;
+}
+
+.screen {
+    padding: 10px;
+}
+
+.output_text {
+    font-size: 22px;
+}
+
+.folders {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.folders_list {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.folder_list_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.folder_list_item,
+.folder_text {
+    user-select: none;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    color: #00ff00;
+}
+
+.folder_text {
+    font-size: 18px;
+    text-align: center;
+    color: #00ff00;
+}
+
+.terminal_intro {
+    display: flex;
+    align-items: center;
+}
+
+.terminal {
+    font-size: 20px;
+}
+
+.ascii {
+    margin-right: 20px;
+}
+
+#terminal {
+    width: 100%;
+    height: calc(100% - 60px);
+    border: 2px solid #00ff00;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#output {
+    flex-grow: 1;
+    white-space: pre-wrap;
+    overflow-y: auto;
+}
+
+#input-line {
+    display: flex;
+    font-size: 20px;
+}
+
+.prompt {
+    margin-right: 5px;
+    color: #00ff00;
+}
+
+#command-input {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    color: #00ff00;
+    caret-color: #00ff00;
+    outline: none;
+    font-size: 20px;
+}
+
+/* Terminal Block Styling */
+.terminal_block {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #00ff00;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.terminal_intro {
+    flex-shrink: 0;
+    margin-bottom: 10px;
+}
+
+.terminal_container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-top: 1px solid #00ff00;
+    padding-top: 10px;
+}
+
+#output {
+    flex-grow: 1;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    margin-bottom: 10px;
+}
+
+#input-line {
+    display: flex;
+    align-items: center;
+}
+
+.prompt {
+    margin-right: 5px;
+    color: #00ff00;
+}
+
+#command-input {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    color: #00ff00;
+    caret-color: #00ff00;
+    outline: none;
+    font-size: 20px;
+}
+
+/* Custom Scroll Bar Styles (Rectangular) */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the vertical scroll bar */
+    height: 10px; /* Height of the horizontal scroll bar */
+}
+
+::-webkit-scrollbar-track {
+    background: #000; /* Black background for the track */
+    border: 2px solid #00ff00; /* Green border around the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff00; /* Green thumb (scroll handle) */
+    border: 2px solid #000; /* Black border for contrast */
+    border-radius: 0px; /* No rounding, for a rectangular style */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00cc00; /* Lighter green on hover */
+}
+
+/* Apply the custom scroll bar to specific elements */
+#terminal,
+#output {
+    scrollbar-color: #00ff00 #000;
+    scrollbar-width: thin;
+}
+
+/* Modal Styles (A4 Paper Style) */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Updated Modal Styles */
+.modal-content {
+    width: 80%;
+    max-width: 800px;
+    height: 90%;
+    max-height: 90%;
+    padding: 20px;
+    border: 4px solid #00ff00;
+    background-color: #000;
+    color: #00ff00;
+    font-family: 'VT323', monospace;
+    font-size: 22px;
+    position: relative;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+/* Enable text selection in the modal */
+.modal-text {
+    user-select: text;
+    white-space: pre-wrap;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #00ff00;
+}
+
+.modal a {
+    color: #00ff00;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Enable text selection specifically for the modal content */
+.modal-text,
+.modal a {
+    user-select: text;
+    -webkit-user-select: text; /* For Safari */
+    -moz-user-select: text;    /* For Firefox */
+    -ms-user-select: text;     /* For Internet Explorer/Edge */
+    cursor: text; /* Default cursor for selectable text */
+}
+
+/* Make links in the modal clickable with a pointer cursor */
+.modal a {
+    cursor: pointer;
+}
+
+.modal a:hover {
+    color: #00cc00; /* Lighter green on hover */
+}
+
+/* Ensure links are clickable and show the pointer cursor */
+.modal a {
+    pointer-events: auto;
+    cursor: pointer;
+    color: #00ff00;
+    text-decoration: underline;
+}
+
+
+/* 3D-Style Close Button */
+.close-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: #00ff00;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    border: 2px solid #00ff00;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+/* 3D Effect with Green Shadow */
+.close-btn::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: -4px;
+    width: 100%;
+    height: 100%;
+    background-color: #00ff00;
+    z-index: -1;
+    transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+    color: #00cc00;
+    border-color: #00cc00;
+    transform: translate(-2px, -2px);
+}
+
+.close-btn:hover::after {
+    top: 6px;
+    right: -6px;
+    background-color: #00cc00;
+}
+
+.close-btn:active {
+    top: 12px;
+    right: 12px;
+    color: #009900;
+    border-color: #009900;
+}
+
+.close-btn:active::after {
+    top: 8px;
+    right: -8px;
+    background-color: #009900;
+}
+
+.modal-text {
+    white-space: pre-wrap;
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Portal Block Styles */
+#portal-block {
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#portal-block.active {
+    display: flex; /* Make it visible when the class is added */
+}
+
+#portal-link {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#portal-gif {
+    width: 200px;
+    height: 349px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Portal GIF */
+#portal-gif:hover {
+    transform: scale(1.1);
+}
+
+
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">    
+    <title>Neo's 0ffice</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="blocks">
+            <!-- terminal block -->
+<div class="terminal_block">
+    <div class="terminal_intro">
+        <div class="ascii">
+            <pre class="ascii-art">
+                , _ ,
+              ( \ / )
+             /'` ' `'\
+            |''''''''|
+            |\\\\////|
+            '''""""'''
+         </pre>
+        </div>
+        <div class="terminal_intro_text">
+            Hi, this is '0ffice' of illusionNe0, here you can find necessary information about me. Type 'help' to see commands. 00 =]
+        </div>
+    </div>
+    <div class="terminal_container">
+        <div id="output"></div> 
+        <div id="input-line">
+            <span class="prompt">user@neo0ffice:~$</span>
+            <input type="text" id="command-input" autofocus autocomplete="off">
+        </div>
+    </div>
+</div>
+
+            <!-- screen block -->
+             <div class="screen_block">
+                <div class="screen">
+                    <div class="output_text">
+                        Oops.. UI doesn't work, use CLI!
+                    </div>
+
+                    <div class="folders">
+                        <!-- First list of folders -->
+                        <ul class="folders_list">
+                            <li class="folder_list_item">
+                                <svg class="icon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                                    <g transform="translate(0,200) scale(0.1,-0.1)" fill="currentColor" stroke="none">
+                                        <path d="M520 1540 c0 -13 -7 -20 -20 -20 -13 0 -20 -7 -20 -20 0 -13 -7 -20 -20 -20 -13 0 -20 -7 -20 -20 0 -13 -7 -20 -20 -20 -13 0 -20 -7 -20 -20 0 -13 -7 -20 -20 -20 -20 0 -20 -7 -20 -440 0 -433 0 -440 20 -440 13 0 20 -7 20 -20 0 -20 7 -20 600 -20 593 0 600 0 600 20 0 13 7 20 20 20 20 0 20 7 20 440 0 433 0 440 -20 440 -13 0 -20 7 -20 20 0 20 -7 20 -300 20 -293 0 -300 0 -300 20 0 13 -7 20 -20 20 -13 0 -20 7 -20 20 0 13 -7 20 -20 20 -13 0 -20 7 -20 20 0 19 -7 20 -200 20 -193 0 -200 -1 -200 -20z m400 -40 c0 -13 7 -20 20 -20 13 0 20 -7 20 -20 0 -13 7 -20 20 -20 13 0 20 -7 20 -20 0 -20 7 -20 300 -20 293 0 300 0 300 -20 0 -20 -7 -20 -600 -20 -593 0 -600 0 -600 20 0 13 7 20 20 20 13 0 20 7 20 20 0 13 7 20 20 20 13 0 20 7 20 20 0 13 7 20 20 20 13 0 20 7 20 20 0 19 7 20 200 20 193 0 200 -1 200 -20z m680 -580 l0 -400 -600 0 -600 0 0 400 0 400 600 0 600 0 0 -400z"/>
+                                    </g>
+                                </svg>
+                                <span class="folder_text">info</span>
+                            </li>
+                            <li class="folder_list_item">
+                                <svg class="icon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                                    <g transform="translate(0,200) scale(0.1,-0.1)" fill="currentColor" stroke="none">
+                                        <path d="M520 1540 c0 -13 -7 -20 -20 -20 -13 0 -20 -7 -20 -20 0 -13 -7 -20 -20 -20 -13 0 -20 -7 -20 -20 0 -13 -7 -20 -20 -20 -13 0 -20 -7 -20 -20 0 -13 -7 -20 -20 -20 -20 0 -20 -7 -20 -440 0 -433 0 -440 20 -440 13 0 20 -7 20 -20 0 -20 7 -20 600 -20 593 0 600 0 600 20 0 13 7 20 20 20 20 0 20 7 20 440 0 433 0 440 -20 440 -13 0 -20 7 -20 20 0 20 -7 20 -300 20 -293 0 -300 0 -300 20 0 13 -7 20 -20 20 -13 0 -20 7 -20 20 0 13 -7 20 -20 20 -13 0 -20 7 -20 20 0 19 -7 20 -200 20 -193 0 -200 -1 -200 -20z m400 -40 c0 -13 7 -20 20 -20 13 0 20 -7 20 -20 0 -13 7 -20 20 -20 13 0 20 -7 20 -20 0 -20 7 -20 300 -20 293 0 300 0 300 -20 0 -20 -7 -20 -600 -20 -593 0 -600 0 -600 20 0 13 7 20 20 20 13 0 20 7 20 20 0 13 7 20 20 20 13 0 20 7 20 20 0 13 7 20 20 20 13 0 20 7 20 20 0 19 7 20 200 20 193 0 200 -1 200 -20z m680 -580 l0 -400 -600 0 -600 0 0 400 0 400 600 0 600 0 0 -400z"/>
+                                    </g>
+                                </svg>
+                                <span class="folder_text">experience</span>
+                            </li>
+                            <li class="folder_list_item">
+                                <svg class="icon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                                    <g transform="translate(0,200) scale(0.1,-0.1)" fill="currentColor" stroke="none">
+                                        <path d="M520 1540 c0 -13 -7 -20 -20 -20 -13 0 -20 -7 -20 -20 0 -13 -7 -20 -20 -20 -13 0 -20 -7 -20 -20 0 -13 -7 -20 -20 -20 -13 0 -20 -7 -20 -20 0 -13 -7 -20 -20 -20 -20 0 -20 -7 -20 -440 0 -433 0 -440 20 -440 13 0 20 -7 20 -20 0 -20 7 -20 600 -20 593 0 600 0 600 20 0 13 7 20 20 20 20 0 20 7 20 440 0 433 0 440 -20 440 -13 0 -20 7 -20 20 0 20 -7 20 -300 20 -293 0 -300 0 -300 20 0 13 -7 20 -20 20 -13 0 -20 7 -20 20 0 13 -7 20 -20 20 -13 0 -20 7 -20 20 0 19 -7 20 -200 20 -193 0 -200 -1 -200 -20z m400 -40 c0 -13 7 -20 20 -20 13 0 20 -7 20 -20 0 -13 7 -20 20 -20 13 0 20 -7 20 -20 0 -20 7 -20 300 -20 293 0 300 0 300 -20 0 -20 -7 -20 -600 -20 -593 0 -600 0 -600 20 0 13 7 20 20 20 13 0 20 7 20 20 0 13 7 20 20 20 13 0 20 7 20 20 0 13 7 20 20 20 13 0 20 7 20 20 0 19 7 20 200 20 193 0 200 -1 200 -20z m680 -580 l0 -400 -600 0 -600 0 0 400 0 400 600 0 600 0 0 -400z"/>
+                                    </g>
+                                </svg>
+                                <span class="folder_text">projects</span>
+                            </li>
+                        </ul>
+                    
+                        <!-- Second list of folders -->
+                        <ul class="folders_list">
+                            <li class="folder_list_item">
+                                <svg class="icon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                                    <g transform="translate(0,200) scale(0.1,-0.1)" fill="currentColor" stroke="none">
+                                        <path d="M520 1540 c0 -13 -7 -20 -20 -20 -13 0 -20 -7 -20 -20 0 -13 -7 -20 -20 -20 -13 0 -20 -7 -20 -20 0 -13 -7 -20 -20 -20 -13 0 -20 -7 -20 -20 0 -13 -7 -20 -20 -20 -20 0 -20 -7 -20 -440 0 -433 0 -440 20 -440 13 0 20 -7 20 -20 0 -20 7 -20 600 -20 593 0 600 0 600 20 0 13 7 20 20 20 20 0 20 7 20 440 0 433 0 440 -20 440 -13 0 -20 7 -20 20 0 20 -7 20 -300 20 -293 0 -300 0 -300 20 0 13 -7 20 -20 20 -13 0 -20 7 -20 20 0 13 -7 20 -20 20 -13 0 -20 7 -20 20 0 19 -7 20 -200 20 -193 0 -200 -1 -200 -20z m400 -40 c0 -13 7 -20 20 -20 13 0 20 -7 20 -20 0 -13 7 -20 20 -20 13 0 20 -7 20 -20 0 -20 7 -20 300 -20 293 0 300 0 300 -20 0 -20 -7 -20 -600 -20 -593 0 -600 0 -600 20 0 13 7 20 20 20 13 0 20 7 20 20 0 13 7 20 20 20 13 0 20 7 20 20 0 13 7 20 20 20 13 0 20 7 20 20 0 19 7 20 200 20 193 0 200 -1 200 -20z m680 -580 l0 -400 -600 0 -600 0 0 400 0 400 600 0 600 0 0 -400z"/>
+                                    </g>
+                                </svg>
+                                <span class="folder_text">contacts</span>
+                            </li>
+                            <li class="folder_list_item">
+                                <svg class="icon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                                    <g transform="translate(0,200) scale(0.1,-0.1)" fill="currentColor" stroke="none">
+                                        <path d="M520 1540 c0 -13 -7 -20 -20 -20 -13 0 -20 -7 -20 -20 0 -13 -7 -20 -20 -20 -13 0 -20 -7 -20 -20 0 -13 -7 -20 -20 -20 -13 0 -20 -7 -20 -20 0 -13 -7 -20 -20 -20 -20 0 -20 -7 -20 -440 0 -433 0 -440 20 -440 13 0 20 -7 20 -20 0 -20 7 -20 600 -20 593 0 600 0 600 20 0 13 7 20 20 20 20 0 20 7 20 440 0 433 0 440 -20 440 -13 0 -20 7 -20 20 0 20 -7 20 -300 20 -293 0 -300 0 -300 20 0 13 -7 20 -20 20 -13 0 -20 7 -20 20 0 13 -7 20 -20 20 -13 0 -20 7 -20 20 0 19 -7 20 -200 20 -193 0 -200 -1 -200 -20z m400 -40 c0 -13 7 -20 20 -20 13 0 20 -7 20 -20 0 -13 7 -20 20 -20 13 0 20 -7 20 -20 0 -20 7 -20 300 -20 293 0 300 0 300 -20 0 -20 -7 -20 -600 -20 -593 0 -600 0 -600 20 0 13 7 20 20 20 13 0 20 7 20 20 0 13 7 20 20 20 13 0 20 7 20 20 0 13 7 20 20 20 13 0 20 7 20 20 0 19 7 20 200 20 193 0 200 -1 200 -20z m680 -580 l0 -400 -600 0 -600 0 0 400 0 400 600 0 600 0 0 -400z"/>
+                                    </g>
+                                </svg>
+                                <span class="folder_text">others</span>
+                            </li>
+                        </ul>
+
+                        <!-- Portal Block (Initially Hidden) -->
+<div id="portal-block" class="hidden">
+    <a href="#" id="portal-link">
+        <img src="./res/portal.gif" id="portal-gif" alt="Portal Animation">
+    </a>
+</div>
+
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+<!-- Popup Modal (Hidden by Default) -->
+<div id="modal" class="modal hidden">
+    <div class="modal-content">
+        <button id="close-btn" class="close-btn">X</button>
+        <div id="modal-text" class="modal-text"></div>
+    </div>
+</div>
+
+<script src="./src/js/index.js"></script>
+</body>
+</html>
