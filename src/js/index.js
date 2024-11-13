@@ -9,7 +9,7 @@ function checkDevice() {
         const body = document.querySelector('body');
         body.innerHTML = `
             <div style="display: flex; justify-content: center; align-items: center; width: 100vw; height: 100vh; background-color: #000; color: #00ff00; text-align: center; font-family: 'VT323', monospace; font-size: 22px;">
-                <p>Oops! This website is designed for desktop use only. Please access it from a laptop or PC.</p>
+                <p>This website is designed for desktop use only. Please access it from a laptop or PC.</p>
             </div>
         `;
     }
