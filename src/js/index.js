@@ -38,18 +38,20 @@ Greetings, homo sapienses!
 
 I am illusionNe0, an Android software developer enthusiast. I like to create new things that can be applied in real life and solve problems! In my free time, I study math and electronics, which I find extremely interesting. Here’s some specific information about me:
 
-Name: Daryn Imash
+Name: Daryn
 Current Role: Student at NU (Nazarbayev University) in Astana
 Interests: Android development, script writing
 Tools & Technologies: Java, Kotlin, Jetpack Compose
 Languages: Kazakh - native, Russian - native, English - C1`,
 
         "open projects": `Projects List
-Soon...`,
+- You can check my pet projects from my GitHub (link in contacts page)
+- Actual projects list:
+soon...`,
 
         "open experience": `Experience
 Education:
-I am a 1st-year Computer Science major student at NU. I already have experience in programming with C language. 
+I am a 1st-year Computer Science major student at NU. I already have experience in programming with C language =]
 
 Work Experience by Chronology:
 Soon...
